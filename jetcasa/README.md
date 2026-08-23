@@ -25,13 +25,27 @@ que corre em GitHub Pages ou em qualquer alojamento. A lógica de dados está is
 ```bash
 cd jetcasa
 npm install
-npm run dev      # http://localhost:5173/jetcasa/
+npm run dev      # http://localhost:5173/JayJag07/
 npm run build    # gera dist/ (inclui 404.html para deep links no GitHub Pages)
-npm run preview  # serve o build em http://localhost:4173/jetcasa/
+npm run preview  # serve o build em http://localhost:4173/JayJag07/
 ```
 
-O `base` do Vite está em `/jetcasa/`. Para publicar na raiz de um domínio próprio, altere
-`base: '/'` em `vite.config.js`.
+## Publicação (GitHub Pages)
+
+O site está publicado a partir do branch `gh-pages` do próprio repositório, em
+**https://jayjag07.github.io/JayJag07/** (Definições → Pages → Source: *Deploy from a branch* →
+`gh-pages` / `root`).
+
+Para republicar depois de alterações:
+
+```bash
+cd jetcasa
+npm run build                      # gera dist/ com base /JayJag07/
+npm run deploy                     # publica dist/ no branch gh-pages
+```
+
+O `base` do Vite é `/JayJag07/` (o nome do repositório). Para servir na raiz de um domínio
+próprio, construa com `VITE_BASE=/ npm run build`.
 
 ## Estrutura
 
