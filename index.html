@@ -9,18 +9,62 @@
       content="JETCASA — o seu portal imobiliário em Angola. Encontre a sua próxima casa, apartamento ou terreno de forma rápida e segura."
     />
     <title>JETCASA — O seu portal imobiliário em Angola</title>
+    <link rel="canonical" href="https://jayjag07.github.io/JayJag07/" />
     <link rel="icon" href="/JayJag07/favicon.svg" type="image/svg+xml" />
+
+    <!-- Cartão de partilha: sem isto, colar o link no WhatsApp mostra só o URL. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="JETCASA" />
+    <meta property="og:locale" content="pt_AO" />
+    <meta property="og:url" content="https://jayjag07.github.io/JayJag07/" />
+    <meta property="og:title" content="JETCASA — O seu portal imobiliário em Angola" />
+    <meta
+      property="og:description"
+      content="Compra, venda e arrendamento de imóveis e terrenos em todas as províncias de Angola. Valores em Kwanza e documentação verificada."
+    />
+    <meta property="og:image" content="https://jayjag07.github.io/JayJag07/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="JETCASA — encontre a sua próxima casa, apartamento ou terreno" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JETCASA — O seu portal imobiliário em Angola" />
+    <meta
+      name="twitter:description"
+      content="Compra, venda e arrendamento de imóveis e terrenos em todas as províncias de Angola."
+    />
+    <meta name="twitter:image" content="https://jayjag07.github.io/JayJag07/og-cover.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/JayJag07/assets/index-DrfyuPfa.js"></script>
-    <link rel="modulepreload" crossorigin href="/JayJag07/assets/Button-DoWFYOw1.js">
-    <link rel="stylesheet" crossorigin href="/JayJag07/assets/index-DShHaema.css">
+    <script type="module" crossorigin src="/JayJag07/assets/index-Bu5MWwmg.js"></script>
+    <link rel="modulepreload" crossorigin href="/JayJag07/assets/Button-CR_MdHBK.js">
+    <link rel="stylesheet" crossorigin href="/JayJag07/assets/index-Biu7uAKk.css">
   </head>
   <body>
+    <script>
+      // O GitHub Pages não conhece as rotas do React Router: o 404.html redirecciona
+      // /JayJag07/imovel/jc-001 para /JayJag07/?/imovel/jc-001 e este bloco repõe o
+      // endereço original antes de a aplicação arrancar.
+      ;(function () {
+        var q = window.location.search
+        if (q.charAt(1) !== '/') return
+        var decoded = q
+          .slice(1)
+          .split('&')
+          .map(function (part) {
+            return part.replace(/~and~/g, '&')
+          })
+          .join('?')
+        window.history.replaceState(
+          null,
+          null,
+          window.location.pathname.replace(/\/$/, '') + decoded + window.location.hash,
+        )
+      })()
+    </script>
     <div id="root"></div>
   </body>
 </html>
