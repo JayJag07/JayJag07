@@ -24,7 +24,8 @@ export default function PropertyCard({ property, compact = false, onHover }) {
           alt={p.title}
           className={compact ? 'aspect-[16/10]' : 'aspect-[4/3]'}
         />
-        <div className="pointer-events-none absolute left-3 top-3 flex flex-wrap gap-1.5">
+        {/* right-14 reserva o espaço do coração: sem isso os badges passam por baixo dele. */}
+        <div className="pointer-events-none absolute left-3 right-14 top-3 flex flex-wrap gap-1.5">
           <Badge tone={p.purpose === 'venda' ? 'brand' : 'success'}>
             {p.purpose === 'venda' ? 'Para Venda' : 'Para Aluguer'}
           </Badge>
@@ -44,7 +45,7 @@ export default function PropertyCard({ property, compact = false, onHover }) {
               </span>
             )}
           </p>
-          <span className="shrink-0 text-xs font-medium text-slate-400">{timeAgo(p.createdAt)}</span>
+          <span className="shrink-0 text-xs font-medium text-slate-500 dark:text-slate-400">{timeAgo(p.createdAt)}</span>
         </div>
 
         <h3 className="mt-1.5 line-clamp-1 font-semibold text-slate-800 transition group-hover:text-brand-600 dark:text-slate-100 dark:group-hover:text-brand-300">

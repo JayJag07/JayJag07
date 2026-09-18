@@ -26,7 +26,7 @@ export default function ContactWidget({ property, agent }) {
   }
 
   return (
-    <aside className="lg:sticky lg:top-24">
+    <aside className="min-w-0 lg:sticky lg:top-24">
       <div className="card overflow-hidden">
         <div className="border-b border-slate-100 p-5 dark:border-slate-800">
           <p className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
@@ -53,7 +53,7 @@ export default function ContactWidget({ property, agent }) {
               <p className="truncate text-sm text-slate-500 dark:text-slate-400">
                 {agent.agency} · {agent.role}
               </p>
-              <p className="mt-0.5 flex items-center gap-1 text-xs font-semibold text-gold-600">
+              <p className="mt-0.5 flex items-center gap-1 text-xs font-semibold text-gold-700 dark:text-gold-400">
                 <Star className="size-3.5 fill-gold-500 text-gold-500" /> {agent.rating} · {agent.deals} negócios
               </p>
             </div>
@@ -82,8 +82,8 @@ export default function ContactWidget({ property, agent }) {
           </div>
 
           {sent ? (
-            <div className="rounded-xl bg-success-500/10 p-5 text-center">
-              <CheckCircle2 className="mx-auto size-10 text-success-500" />
+            <div className="rounded-xl bg-success-600/10 p-5 text-center">
+              <CheckCircle2 className="mx-auto size-10 text-success-600" />
               <p className="mt-3 font-bold text-slate-900 dark:text-white">Pedido enviado!</p>
               <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
                 {agent ? `${agent.name} responde normalmente em menos de 2 horas.` : 'Entraremos em contacto em breve.'}
@@ -110,12 +110,23 @@ export default function ContactWidget({ property, agent }) {
 
               {tab === 'visita' ? (
                 <div className="grid grid-cols-2 gap-3">
-                  <Input type="date" value={form.date} onChange={set('date')} required />
-                  <Input type="time" value={form.time} onChange={set('time')} required />
+                  <label className="block">
+                    <span className="mb-1 block text-xs font-semibold text-slate-600 dark:text-slate-300">
+                      Dia da visita
+                    </span>
+                    <Input type="date" value={form.date} onChange={set('date')} required />
+                  </label>
+                  <label className="block">
+                    <span className="mb-1 block text-xs font-semibold text-slate-600 dark:text-slate-300">
+                      Hora
+                    </span>
+                    <Input type="time" value={form.time} onChange={set('time')} required />
+                  </label>
                 </div>
               ) : (
                 <textarea
                   rows={4}
+                  aria-label="Mensagem para o agente"
                   value={form.message}
                   onChange={set('message')}
                   className="w-full resize-none rounded-xl bg-white px-3.5 py-3 text-sm text-slate-800 ring-1 ring-slate-200 outline-none transition focus:ring-2 focus:ring-brand-500 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700"
@@ -151,7 +162,7 @@ export default function ContactWidget({ property, agent }) {
         </div>
       </div>
 
-      <p className="mt-3 px-1 text-xs leading-relaxed text-slate-400">
+      <p className="mt-3 px-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
         Nunca faça pagamentos antes de visitar o imóvel e confirmar a documentação. O JETCASA não
         intermedeia pagamentos entre particulares.
       </p>

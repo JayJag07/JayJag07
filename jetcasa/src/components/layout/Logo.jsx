@@ -20,7 +20,7 @@ export default function Logo({ className = '', inverted = false }) {
         </span>
         <span
           className={`mt-0.5 block text-[10px] font-semibold uppercase tracking-[0.18em] ${
-            inverted ? 'text-white/70' : 'text-slate-400'
+            inverted ? 'text-white/80' : 'text-slate-500 dark:text-slate-400'
           }`}
         >
           Portal imobiliário

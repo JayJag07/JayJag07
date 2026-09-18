@@ -40,6 +40,7 @@ export default function Agents() {
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <input
           type="search"
+          aria-label="Procurar agente por nome, agência ou zona"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Procurar por nome, agência ou zona"
@@ -47,6 +48,7 @@ export default function Agents() {
         />
         <select
           value={province}
+          aria-label="Filtrar por província"
           onChange={(e) => setProvince(e.target.value)}
           className="h-12 rounded-xl bg-white px-4 text-sm font-semibold ring-1 ring-slate-200 outline-none focus:ring-2 focus:ring-brand-500 dark:bg-slate-900 dark:text-white dark:ring-slate-700"
         >
@@ -72,7 +74,7 @@ export default function Agents() {
                     {agent.verified && <ShieldCheck className="size-4 shrink-0 text-success-500" />}
                   </h2>
                   <p className="truncate text-sm text-slate-500 dark:text-slate-400">{agent.role}</p>
-                  <p className="mt-0.5 flex items-center gap-1 text-xs font-bold text-gold-600">
+                  <p className="mt-0.5 flex items-center gap-1 text-xs font-bold text-gold-700 dark:text-gold-400">
                     <Star className="size-3.5 fill-gold-500 text-gold-500" />
                     {agent.rating} · {agent.deals} negócios
                   </p>

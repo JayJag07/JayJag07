@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 const VARIANTS = {
   primary:
     'bg-brand-500 text-white hover:bg-brand-600 active:bg-brand-700 shadow-sm hover:shadow-md',
-  gold: 'bg-gold-500 text-white hover:bg-gold-600 shadow-sm hover:shadow-md',
-  success: 'bg-success-500 text-white hover:bg-success-600 shadow-sm',
+  gold: 'bg-gold-700 text-white hover:bg-gold-800 shadow-sm hover:shadow-md',
+  success: 'bg-success-600 text-white hover:bg-success-700 shadow-sm',
   outline:
     'ring-1 ring-slate-300 text-slate-700 hover:bg-slate-100 hover:ring-slate-400 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-800',
   ghost:

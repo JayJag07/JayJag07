@@ -48,13 +48,13 @@ export default function Sell() {
       <section className="bg-brand-500">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-20">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white ring-1 ring-white/25">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white ring-1 ring-white/40">
               Vender no JETCASA
             </span>
             <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
               Venda o seu imóvel ou terreno com quem conhece o mercado angolano
             </h1>
-            <p className="mt-4 max-w-xl text-white/85">
+            <p className="mt-4 max-w-xl text-white/90">
               Publique gratuitamente, receba contactos qualificados por WhatsApp e conte com a nossa
               equipa para validar a documentação até à escritura.
             </p>

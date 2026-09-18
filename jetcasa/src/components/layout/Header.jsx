@@ -11,7 +11,8 @@ const NAV = [
   { to: '/pesquisar?fim=aluguer', label: 'Alugar' },
   { to: '/vender', label: 'Vender' },
   { to: '/pesquisar?fim=terreno', label: 'Terrenos' },
-  { to: '/agentes', label: 'Agentes Imobiliários' },
+  // Entre 1024 e 1279px não cabem cinco rótulos longos mais os dois botões.
+  { to: '/agentes', label: 'Agentes Imobiliários', shortLabel: 'Agentes' },
 ]
 
 export default function Header() {
@@ -40,7 +41,7 @@ export default function Header() {
       <div className="mx-auto flex h-18 max-w-7xl items-center gap-4 px-4 py-3 sm:px-6">
         <Logo />
 
-        <nav className="ml-4 hidden items-center gap-1 lg:flex">
+        <nav aria-label="Navegação principal" className="ml-4 hidden items-center gap-1 lg:flex">
           {NAV.map((item) => (
             <NavLink
               key={item.label}
@@ -53,7 +54,14 @@ export default function Header() {
                 }`
               }
             >
-              {item.label}
+              {item.shortLabel ? (
+                <>
+                  <span className="xl:hidden">{item.shortLabel}</span>
+                  <span className="hidden xl:inline">{item.label}</span>
+                </>
+              ) : (
+                item.label
+              )}
             </NavLink>
           ))}
         </nav>
@@ -79,11 +87,18 @@ export default function Header() {
               Publicar Imóvel
             </Button>
           </span>
-          <span className="hidden md:block">
+          <span className="hidden xl:block">
             <Button to="/entrar" variant="outline" size="sm" icon={LogIn} className="whitespace-nowrap">
               Entrar / Cadastrar
             </Button>
           </span>
+          <Link
+            to="/entrar"
+            aria-label="Entrar ou criar conta"
+            className="hidden size-10 place-items-center rounded-xl text-slate-600 transition hover:bg-slate-100 md:grid xl:hidden dark:text-slate-300 dark:hover:bg-slate-800"
+          >
+            <LogIn className="size-5" />
+          </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -98,7 +113,7 @@ export default function Header() {
 
       {open && (
         <div className="border-t border-slate-200 bg-white px-4 pb-5 pt-3 lg:hidden dark:border-slate-800 dark:bg-slate-950">
-          <nav className="flex flex-col">
+          <nav aria-label="Navegação principal (menu móvel)" className="flex flex-col">
             {NAV.map((item) => (
               <Link
                 key={item.label}

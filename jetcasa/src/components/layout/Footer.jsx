@@ -70,15 +70,15 @@ export default function Footer() {
 
         {COLUMNS.map((col) => (
           <div key={col.title}>
-            <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900 dark:text-white">
+            <h2 className="text-sm font-bold uppercase tracking-wide text-slate-900 dark:text-white">
               {col.title}
-            </h3>
+            </h2>
             <ul className="mt-4 space-y-2.5">
               {col.links.map((l) => (
                 <li key={l.label}>
                   <Link
                     to={l.to}
-                    className="text-sm text-slate-500 transition hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300"
+                    className="text-sm text-slate-600 transition hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300"
                   >
                     {l.label}
                   </Link>
@@ -89,7 +89,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="border-t border-slate-200 px-4 py-6 text-center text-xs text-slate-400 sm:px-6 dark:border-slate-800">
+      <div className="border-t border-slate-200 px-4 py-6 text-center text-xs text-slate-500 sm:px-6 dark:border-slate-400">
         © {new Date().getFullYear()} JETCASA — O seu portal imobiliário em Angola. Valores em Kwanza (AOA).
         Projecto de demonstração com dados fictícios.
       </div>

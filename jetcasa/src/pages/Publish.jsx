@@ -90,7 +90,7 @@ export default function Publish() {
             >
               <s.icon className="size-5" />
             </button>
-            <span className={`hidden text-sm font-semibold sm:block ${step === s.id ? 'text-slate-900 dark:text-white' : 'text-slate-400'}`}>
+            <span className={`hidden text-sm font-semibold sm:block ${step === s.id ? 'text-slate-900 dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
               {s.title}
             </span>
             {i < STEPS.length - 1 && <span className="h-0.5 flex-1 rounded bg-slate-200 dark:bg-slate-800" />}

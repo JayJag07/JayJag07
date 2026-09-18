@@ -73,7 +73,7 @@ export default function Login() {
           </Button>
         </form>
 
-        <p className="mt-5 text-center text-xs leading-relaxed text-slate-400">
+        <p className="mt-5 text-center text-xs leading-relaxed text-slate-500 dark:text-slate-400">
           Ao continuar aceita os termos de utilização e a política de privacidade do JETCASA. Esta é
           uma interface de demonstração — nenhum dado é enviado.
         </p>

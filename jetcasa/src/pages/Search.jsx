@@ -126,6 +126,7 @@ export default function Search() {
               </div>
             ) : (
               <div className="grid gap-5 pb-8 sm:grid-cols-2">
+                <h2 className="sr-only">Lista de imóveis encontrados</h2>
                 {results.map((p) => (
                   <PropertyCard key={p.id} property={p} onHover={setActiveId} />
                 ))}

@@ -57,7 +57,7 @@ function LoanSimulator({ property }) {
       />
 
       <div className="mt-5 rounded-xl bg-brand-500 p-4 text-white">
-        <p className="text-xs font-semibold uppercase tracking-wide text-white/70">
+        <p className="text-xs font-semibold uppercase tracking-wide text-white/90">
           Prestação mensal estimada
         </p>
         <p className="mt-1 text-3xl font-extrabold tracking-tight">{formatAOA(monthly)}</p>
@@ -101,8 +101,8 @@ function RentSimulator({ property }) {
         display={formatAOA(condo)}
       />
 
-      <div className="mt-5 rounded-xl bg-success-500 p-4 text-white">
-        <p className="text-xs font-semibold uppercase tracking-wide text-white/70">
+      <div className="mt-5 rounded-xl bg-success-600 p-4 text-white">
+        <p className="text-xs font-semibold uppercase tracking-wide text-white/90">
           Custo mensal estimado
         </p>
         <p className="mt-1 text-3xl font-extrabold tracking-tight">{formatAOA(monthlyTotal)}</p>

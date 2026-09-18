@@ -58,7 +58,7 @@ export default function HowItWorks() {
               <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
                 Tem um imóvel ou terreno para vender?
               </h3>
-              <p className="mt-2 text-white/80">
+              <p className="mt-2 text-white/90">
                 Publique gratuitamente e chegue a milhares de compradores em todo o país. A nossa
                 equipa ajuda a preparar as fotografias e a validar a documentação.
               </p>

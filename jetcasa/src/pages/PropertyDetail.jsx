@@ -80,7 +80,7 @@ export default function PropertyDetail() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
-      <nav className="mb-4 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+      <nav aria-label="Caminho de navegação" className="mb-4 flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
         <Link to="/" className="hover:text-brand-600">Início</Link>
         <span>/</span>
         <Link to={`/pesquisar?fim=${property.purpose === 'aluguer' ? 'aluguer' : isLand ? 'terreno' : 'venda'}`} className="hover:text-brand-600">
@@ -93,9 +93,9 @@ export default function PropertyDetail() {
       <Gallery property={property} />
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px]">
-        <div>
+        <div className="min-w-0">
           <div className="flex flex-wrap items-start justify-between gap-4">
-            <div>
+            <div className="min-w-0 flex-1">
               <div className="flex flex-wrap gap-2">
                 <Badge tone={property.purpose === 'venda' ? 'brand' : 'success'}>
                   {property.purpose === 'venda' ? 'Para Venda' : 'Para Aluguer'}
@@ -104,11 +104,11 @@ export default function PropertyDetail() {
                 {property.verified && <Badge tone="outline" icon={ShieldCheck}>Verificado</Badge>}
                 <Badge tone="outline">{propertyTypeLabel(property.type)}</Badge>
               </div>
-              <h1 className="mt-3 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+              <h1 className="mt-3 text-2xl font-extrabold tracking-tight text-balance break-words text-slate-900 sm:text-3xl dark:text-white">
                 {property.title}
               </h1>
-              <p className="mt-2 flex items-center gap-2 text-slate-500 dark:text-slate-400">
-                <MapPin className="size-4 text-brand-500" />
+              <p className="mt-2 flex items-start gap-2 text-slate-600 dark:text-slate-400">
+                <MapPin className="mt-0.5 size-4 shrink-0 text-brand-500" />
                 {property.address} — {property.province}
               </p>
             </div>

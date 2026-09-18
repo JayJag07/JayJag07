@@ -1,10 +1,11 @@
 const TONES = {
   brand: 'bg-brand-500 text-white',
-  gold: 'bg-gold-500 text-white',
-  success: 'bg-success-500 text-white',
-  neutral: 'bg-white/95 text-slate-700 dark:bg-slate-900/90 dark:text-slate-100',
+  // Texto escuro sobre o dourado: branco sobre #f59e0b fica em 2.14:1.
+  gold: 'bg-gold-400 text-slate-900',
+  success: 'bg-success-600 text-white',
+  neutral: 'bg-white/95 text-slate-800 dark:bg-slate-900/90 dark:text-slate-100',
   outline:
-    'bg-transparent text-slate-600 ring-1 ring-slate-300 dark:text-slate-300 dark:ring-slate-700',
+    'bg-transparent text-slate-700 ring-1 ring-slate-400 dark:text-slate-300 dark:ring-slate-700',
 }
 
 export default function Badge({ tone = 'neutral', icon: Icon, children, className = '' }) {

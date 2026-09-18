@@ -107,8 +107,14 @@ agentes com filtro por província e ecrã de autenticação (interface, sem back
   carrega na íntegra mesmo offline e cada anúncio mantém um aspecto próprio.
 - **Mapa degrada bem.** Se os tiles do OpenStreetMap não carregarem, os marcadores de preço
   continuam a funcionar e o mapa avisa o utilizador.
-- **Acessibilidade.** Auto-complete navegável por teclado, modais com Esc e foco preso, `aria-*`
-  nos controlos, alvos de toque ≥ 40 px e respeito por `prefers-reduced-motion`.
+- **Acessibilidade.** Auditado com axe-core nas 9 rotas: zero violações. Auto-complete navegável
+  por teclado, modais com Esc e foco preso, `aria-*` nos controlos, contraste conforme WCAG AA
+  (o dourado dos CTA usa `#b45309` com texto branco, e os badges dourados texto escuro), alvos de
+  toque ≥ 40 px e respeito por `prefers-reduced-motion`.
+- **Links directos e partilha.** O `404.html` redirecciona para a rota da SPA (técnica
+  *spa-github-pages*), por isso `/imovel/jc-001` abre directamente em vez de dar 404. O
+  `index.html` traz Open Graph e Twitter Card com `public/og-cover.jpg`, para o link mostrar
+  cartão quando é partilhado por WhatsApp.
 - **Desempenho.** Rotas em `React.lazy`, Leaflet só entra no bundle da página de pesquisa e o CSS
   final ronda 9 kB gzip.
 - **Dados fictícios.** 24 anúncios e 6 agentes em `src/data/`, cobrindo Luanda, Bengo, Benguela,

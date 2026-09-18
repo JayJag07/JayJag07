@@ -98,7 +98,7 @@ export default function LocationAutocomplete({
                 <span className="flex-1 truncate text-sm font-medium text-slate-700 dark:text-slate-100">
                   {m.label}
                 </span>
-                <span className="shrink-0 text-xs text-slate-400">{m.type}</span>
+                <span className="shrink-0 text-xs text-slate-500 dark:text-slate-400">{m.type}</span>
               </button>
             </li>
           ))}
